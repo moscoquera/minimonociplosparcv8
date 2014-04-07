@@ -1,0 +1,3 @@
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/RegisterFile.vhi -module RegisterFile -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RegisterFile.vhd 
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/RegisterFile.vhi -module RegisterFile -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RegisterFile.vhd 
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/RegisterFile.vhi -module RegisterFile -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work RegisterFile.vhd 

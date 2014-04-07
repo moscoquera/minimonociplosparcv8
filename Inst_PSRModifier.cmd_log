@@ -1,0 +1,2 @@
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_PSRModifier.vhi -module Inst_PSRModifier -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Inst_PSRModifier.vhd 
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_PSRModifier.vhi -module Inst_PSRModifier -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Inst_PSRModifier.vhd 

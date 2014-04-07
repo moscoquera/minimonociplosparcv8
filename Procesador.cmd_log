@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Procesador.xst" -ofn "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Procesador.syr" 

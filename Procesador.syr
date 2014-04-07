@@ -1,0 +1,1586 @@
+Release 14.6 - xst P.68d (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Procesador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Procesador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Procesador"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Procesador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ArithmeticLogicUnit.vhd" in Library work.
+Entity <ArithmeticLogicUnit> compiled.
+Entity <ArithmeticLogicUnit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ControlUnit.vhd" in Library work.
+Entity <ControlUnit> compiled.
+Entity <ControlUnit> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/InstructionMemory.vhd" in Library work.
+Entity <InstructionMemory> compiled.
+Entity <InstructionMemory> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ProgramCounter.vhd" in Library work.
+Entity <ProgramCounter> compiled.
+Entity <ProgramCounter> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/RegisterFile.vhd" in Library work.
+Entity <RegisterFile> compiled.
+Entity <RegisterFile> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/incrementador.vhd" in Library work.
+Entity <incrementador> compiled.
+Entity <incrementador> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_SEU.vhd" in Library work.
+Entity <Inst_SEU> compiled.
+Entity <Inst_SEU> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_Multiplexor21.vhd" in Library work.
+Entity <Inst_Multiplexor21> compiled.
+Entity <Inst_Multiplexor21> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_PSRModifier.vhd" in Library work.
+Entity <Inst_PSRModifier> compiled.
+Entity <Inst_PSRModifier> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Procesador.vhd" in Library work.
+Entity <Procesador> compiled.
+Entity <Procesador> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Procesador> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ArithmeticLogicUnit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ControlUnit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <InstructionMemory> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ProgramCounter> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <RegisterFile> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <incrementador> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Inst_SEU> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Inst_Multiplexor21> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <Inst_PSRModifier> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Procesador> in library <work> (Architecture <Behavioral>).
+Entity <Procesador> analyzed. Unit <Procesador> generated.
+
+Analyzing Entity <ArithmeticLogicUnit> in library <work> (Architecture <Behavioral>).
+Entity <ArithmeticLogicUnit> analyzed. Unit <ArithmeticLogicUnit> generated.
+
+Analyzing Entity <ControlUnit> in library <work> (Architecture <Behavioral>).
+Entity <ControlUnit> analyzed. Unit <ControlUnit> generated.
+
+Analyzing Entity <InstructionMemory> in library <work> (Architecture <Behavioral>).
+Entity <InstructionMemory> analyzed. Unit <InstructionMemory> generated.
+
+Analyzing Entity <ProgramCounter> in library <work> (Architecture <Behavioral>).
+Entity <ProgramCounter> analyzed. Unit <ProgramCounter> generated.
+
+Analyzing Entity <RegisterFile> in library <work> (Architecture <Behavioral>).
+Entity <RegisterFile> analyzed. Unit <RegisterFile> generated.
+
+Analyzing Entity <incrementador> in library <work> (Architecture <Behavioral>).
+Entity <incrementador> analyzed. Unit <incrementador> generated.
+
+Analyzing Entity <Inst_SEU> in library <work> (Architecture <Behavioral>).
+Entity <Inst_SEU> analyzed. Unit <Inst_SEU> generated.
+
+Analyzing Entity <Inst_Multiplexor21> in library <work> (Architecture <Behavioral>).
+Entity <Inst_Multiplexor21> analyzed. Unit <Inst_Multiplexor21> generated.
+
+Analyzing Entity <Inst_PSRModifier> in library <work> (Architecture <Behavioral>).
+INFO:Xst:2679 - Register <PSR<31>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<30>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<29>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<28>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<27>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<26>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<25>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<24>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<19>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<18>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<17>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<16>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<15>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<14>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<13>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<12>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<11>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<10>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<9>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<8>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<7>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<6>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<5>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<4>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<3>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<2>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<1>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSR<0>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <Inst_PSRModifier> analyzed. Unit <Inst_PSRModifier> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ArithmeticLogicUnit>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ArithmeticLogicUnit.vhd".
+    Found 32-bit addsub for signal <Salida$addsub0000>.
+    Found 32-bit addsub for signal <Salida$addsub0001>.
+    Found 32-bit xor2 for signal <Salida$xor0000> created at line 21.
+    Found 32-bit xor2 for signal <Salida$xor0001> created at line 21.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <ArithmeticLogicUnit> synthesized.
+
+
+Synthesizing Unit <ControlUnit>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ControlUnit.vhd".
+Unit <ControlUnit> synthesized.
+
+
+Synthesizing Unit <InstructionMemory>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/InstructionMemory.vhd".
+WARNING:Xst:647 - Input <direccion<31:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1781 - Signal <instrucciones> is used but never assigned. Tied to default value.
+    Found 32x32-bit ROM for signal <$varindex0000> created at line 40.
+    Summary:
+	inferred   1 ROM(s).
+Unit <InstructionMemory> synthesized.
+
+
+Synthesizing Unit <ProgramCounter>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ProgramCounter.vhd".
+    Found 32-bit register for signal <salida>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ProgramCounter> synthesized.
+
+
+Synthesizing Unit <RegisterFile>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/RegisterFile.vhd".
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <registro_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 28.
+    Found 32-bit 32-to-1 multiplexer for signal <$varindex0001> created at line 29.
+    Summary:
+	inferred  64 Multiplexer(s).
+Unit <RegisterFile> synthesized.
+
+
+Synthesizing Unit <incrementador>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/incrementador.vhd".
+    Found 32-bit adder for signal <salida>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <incrementador> synthesized.
+
+
+Synthesizing Unit <Inst_SEU>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_SEU.vhd".
+Unit <Inst_SEU> synthesized.
+
+
+Synthesizing Unit <Inst_Multiplexor21>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_Multiplexor21.vhd".
+Unit <Inst_Multiplexor21> synthesized.
+
+
+Synthesizing Unit <Inst_PSRModifier>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_PSRModifier.vhd".
+WARNING:Xst:647 - Input <VALALU1<30:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VALALU2<30:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_V>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <PSR_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <PSR_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <PSR_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <PSR_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <Inst_PSRModifier> synthesized.
+
+
+Synthesizing Unit <Procesador>.
+    Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Procesador.vhd".
+WARNING:Xst:646 - Signal <PSR<31:21>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PSR<19:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Procesador> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 2
+# Registers                                            : 2
+ 32-bit register                                       : 2
+# Latches                                              : 36
+ 1-bit latch                                           : 5
+ 32-bit latch                                          : 31
+# Multiplexers                                         : 2
+ 32-bit 32-to-1 multiplexer                            : 2
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <Inst_ArithmeticLogicUnit> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_ControlUnit> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_InstructionMemory> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_ProgramCounter> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_NProgramCounter> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_RegisterFile> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_incrementador> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_Inst_SEU> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_Inst_Multiplexor21> is unconnected in block <Procesador>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_Inst_PSRModifier> is unconnected in block <Procesador>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 2
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Latches                                              : 36
+ 1-bit latch                                           : 5
+ 32-bit latch                                          : 31
+# Multiplexers                                         : 2
+ 32-bit 32-to-1 multiplexer                            : 2
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Procesador> ...
+
+Optimizing unit <ArithmeticLogicUnit> ...
+
+Optimizing unit <ProgramCounter> ...
+
+Optimizing unit <Inst_PSRModifier> ...
+
+Optimizing unit <RegisterFile> ...
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/temp_V> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_12_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_13_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_14_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_15_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_20_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_16_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_21_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_17_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_22_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_18_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_23_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_19_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_24_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_25_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_30_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_26_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_31_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_27_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_28_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_29_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_1_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_2_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_3_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_4_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_5_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_6_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_7_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_8_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_9_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_31> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_30> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_29> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_28> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_27> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_26> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_25> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_24> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_22> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_21> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_20> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_19> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_18> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_17> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_16> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_15> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_14> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_13> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_12> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_11> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_10> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_9> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_8> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_7> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_6> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_5> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_4> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_3> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_10_0> of sequential type is unconnected in block <Procesador>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Procesador, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Procesador.ngr
+Top Level Output File Name         : Procesador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 2
+
+Cell Usage :
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                        0  out of   4656     0%  
+ Number of IOs:                           2
+ Number of bonded IOBs:                   0  out of    232     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 21.66 secs
+ 
+--> 
+
+Total memory usage is 285312 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings : 1113 (   0 filtered)
+Number of infos    :   33 (   0 filtered)
+
