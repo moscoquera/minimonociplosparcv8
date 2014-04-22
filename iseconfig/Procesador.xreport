@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-04-07T17:45:04</DateModified>
+  <DateModified>2014-04-22T10:36:25</DateModified>
   <ModuleName>Procesador</ModuleName>
-  <SummaryTimeStamp>2014-04-07T17:22:43</SummaryTimeStamp>
+  <SummaryTimeStamp>2014-04-08T10:20:18</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Smith/Documents/xilinx/ProcessorSmith/iseconfig/Procesador.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Smith/Documents/xilinx/ProcessorSmith\</ImplementationReportsDirectory>
   <DateInitialized>2014-03-28T07:05:21</DateInitialized>

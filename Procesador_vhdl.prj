@@ -1,3 +1,4 @@
+vhdl work "H:\PSR.vhd"
 vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\RegisterFile.vhd"
 vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\ProgramCounter.vhd"
 vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\Inst_SEU.vhd"

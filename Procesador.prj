@@ -1,3 +1,4 @@
+vhdl work "H:/PSR.vhd"
 vhdl work "RegisterFile.vhd"
 vhdl work "ProgramCounter.vhd"
 vhdl work "Inst_SEU.vhd"

@@ -25,15 +25,7 @@ at 0 ps, Instance /procesador_tb/uut/Inst_RegisterFile/ : Warning: CONV_INTEGER:
 at 0 ps, Instance /procesador_tb/uut/Inst_RegisterFile/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 Finished circuit initialization process.
 # restart
-# run 1.00us
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /procesador_tb/uut/Inst_InstructionMemory/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /procesador_tb/uut/Inst_RegisterFile/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /procesador_tb/uut/Inst_RegisterFile/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /procesador_tb/uut/Inst_RegisterFile/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-Finished circuit initialization process.
-# restart
-# run 1.00us
+# run 200 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /procesador_tb/uut/Inst_InstructionMemory/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 0 ps, Instance /procesador_tb/uut/Inst_RegisterFile/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.

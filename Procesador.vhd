@@ -10,7 +10,6 @@ end Procesador;
 
 architecture Behavioral of Procesador is
 	
-	signal PSR : std_logic_vector (31 downto 0) :="00000000000000000000000000000000";
 	
 	signal salidaNPC : std_logic_vector(31 downto 0);
 	signal salidaIncrementador : std_logic_vector(31 downto 0);
@@ -22,6 +21,9 @@ architecture Behavioral of Procesador is
 	signal resultadoAlu : std_logic_vector(31 downto 0);
 	signal salidaSEU: std_logic_vector (31 downto 0);
 	signal salidamultSEU_RF: std_logic_vector (31 downto 0);
+	signal PSRnzvc: std_logic_vector(3 downto 0);
+	signal PSRCarryOut: std_logic;
+	
 	
 	COMPONENT ArithmeticLogicUnit
 	PORT(
@@ -100,17 +102,25 @@ architecture Behavioral of Procesador is
 		VALALU1 : IN std_logic_vector(31 downto 0);
 		VALALU2 : IN std_logic_vector(31 downto 0);
 		RESULTALU : IN std_logic_vector(31 downto 0);       
-		PSR : INOUT std_logic_vector(31 downto 0)
+		nzvc : INOUT std_logic_vector(3 downto 0)
 		);
 	END COMPONENT;
 
+	COMPONENT PSR
+	PORT(
+		CLK : IN std_logic;
+		RST : IN std_logic;
+		nzvc : IN std_logic_vector(3 downto 0);          
+		carry : OUT std_logic
+		);
+	END COMPONENT;
 
 	
 begin
 	Inst_ArithmeticLogicUnit: ArithmeticLogicUnit PORT MAP(
 		Val1 => salidaRF1,
 		Val2 => salidamultSEU_RF,
-		Carry => PSR(20),
+		Carry => PSRCarryOut,
 		OP => CUSalOP,
 		Salida => resultadoAlu
 	);
@@ -170,12 +180,19 @@ begin
 	);
 	
 	Inst_Inst_PSRModifier: Inst_PSRModifier PORT MAP(
-		PSR => PSR,
+		nzvc => PSRnzvc,
 		reset => rst,
 		ALUOP => CUSalOP,
 		VALALU1 => salidaRF1,
 		VALALU2 => salidamultSEU_RF,
 		RESULTALU => resultadoAlu
+	);
+	
+	Inst_PSR: PSR PORT MAP(
+		CLK => clk,
+		RST => rst,
+		nzvc => PSRnzvc,
+		carry => PSRCarryOut
 	);
 	
 end Behavioral;

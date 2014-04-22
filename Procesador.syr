@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: Procesador.prj
 
@@ -105,120 +105,117 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ArithmeticLogicUnit.vhd" in Library work.
-Entity <ArithmeticLogicUnit> compiled.
-Entity <ArithmeticLogicUnit> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity arithmeticlogicunit is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ControlUnit.vhd" in Library work.
-Entity <ControlUnit> compiled.
-Entity <ControlUnit> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity controlunit is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/InstructionMemory.vhd" in Library work.
-Entity <InstructionMemory> compiled.
-Entity <InstructionMemory> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity instructionmemory is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/ProgramCounter.vhd" in Library work.
-Entity <ProgramCounter> compiled.
-Entity <ProgramCounter> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity programcounter is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/RegisterFile.vhd" in Library work.
-Entity <RegisterFile> compiled.
-Entity <RegisterFile> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity registerfile is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/incrementador.vhd" in Library work.
-Entity <incrementador> compiled.
-Entity <incrementador> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity incrementador is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_SEU.vhd" in Library work.
-Entity <Inst_SEU> compiled.
-Entity <Inst_SEU> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity inst_seu is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_Multiplexor21.vhd" in Library work.
-Entity <Inst_Multiplexor21> compiled.
-Entity <Inst_Multiplexor21> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity inst_multiplexor21 is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_PSRModifier.vhd" in Library work.
-Entity <Inst_PSRModifier> compiled.
-Entity <Inst_PSRModifier> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity inst_psrmodifier is up to date.
+Compiling vhdl file "H:/PSR.vhd" in Library work.
+Architecture behavioral of Entity psr is up to date.
 Compiling vhdl file "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Procesador.vhd" in Library work.
-Entity <Procesador> compiled.
-Entity <Procesador> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity procesador is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <Procesador> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Procesador> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <ArithmeticLogicUnit> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <ArithmeticLogicUnit> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <ControlUnit> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <ControlUnit> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <InstructionMemory> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <InstructionMemory> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <ProgramCounter> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <ProgramCounter> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <RegisterFile> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <RegisterFile> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <incrementador> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <incrementador> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <Inst_SEU> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Inst_SEU> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <Inst_Multiplexor21> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Inst_Multiplexor21> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <Inst_PSRModifier> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <Inst_PSRModifier> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PSR> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <Procesador> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Procesador> in library <work> (Architecture <behavioral>).
 Entity <Procesador> analyzed. Unit <Procesador> generated.
 
-Analyzing Entity <ArithmeticLogicUnit> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <ArithmeticLogicUnit> in library <work> (Architecture <behavioral>).
 Entity <ArithmeticLogicUnit> analyzed. Unit <ArithmeticLogicUnit> generated.
 
-Analyzing Entity <ControlUnit> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <ControlUnit> in library <work> (Architecture <behavioral>).
 Entity <ControlUnit> analyzed. Unit <ControlUnit> generated.
 
-Analyzing Entity <InstructionMemory> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <InstructionMemory> in library <work> (Architecture <behavioral>).
 Entity <InstructionMemory> analyzed. Unit <InstructionMemory> generated.
 
-Analyzing Entity <ProgramCounter> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <ProgramCounter> in library <work> (Architecture <behavioral>).
 Entity <ProgramCounter> analyzed. Unit <ProgramCounter> generated.
 
-Analyzing Entity <RegisterFile> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <RegisterFile> in library <work> (Architecture <behavioral>).
 Entity <RegisterFile> analyzed. Unit <RegisterFile> generated.
 
-Analyzing Entity <incrementador> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <incrementador> in library <work> (Architecture <behavioral>).
 Entity <incrementador> analyzed. Unit <incrementador> generated.
 
-Analyzing Entity <Inst_SEU> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Inst_SEU> in library <work> (Architecture <behavioral>).
 Entity <Inst_SEU> analyzed. Unit <Inst_SEU> generated.
 
-Analyzing Entity <Inst_Multiplexor21> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Inst_Multiplexor21> in library <work> (Architecture <behavioral>).
 Entity <Inst_Multiplexor21> analyzed. Unit <Inst_Multiplexor21> generated.
 
-Analyzing Entity <Inst_PSRModifier> in library <work> (Architecture <Behavioral>).
-INFO:Xst:2679 - Register <PSR<31>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<30>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<29>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<28>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<27>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<26>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<25>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<24>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<19>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<18>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<17>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<16>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<15>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<14>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<13>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<12>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<11>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<10>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<9>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<8>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<7>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<6>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<5>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<4>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<3>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<2>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<1>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <PSR<0>> in unit <Inst_PSRModifier> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Analyzing Entity <Inst_PSRModifier> in library <work> (Architecture <behavioral>).
 Entity <Inst_PSRModifier> analyzed. Unit <Inst_PSRModifier> generated.
+
+Analyzing Entity <PSR> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <PSRegister<31>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<30>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<29>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<28>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<27>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<26>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<25>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<24>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<19>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<18>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<17>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<16>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<15>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<14>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<13>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<12>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<11>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<10>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<9>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<8>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<7>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<6>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<5>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<4>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<3>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<2>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<1>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PSRegister<0>> in unit <PSR> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <PSR> analyzed. Unit <PSR> generated.
 
 
 =========================================================================
@@ -321,24 +318,33 @@ Unit <Inst_Multiplexor21> synthesized.
 
 Synthesizing Unit <Inst_PSRModifier>.
     Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_PSRModifier.vhd".
-WARNING:Xst:647 - Input <VALALU1<30:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <VALALU2<30:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:737 - Found 1-bit latch for signal <temp_V>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <PSR_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:647 - Input <VALALU1<30:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <VALALU2<30:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <temp_V> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <PSR_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <PSR_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-WARNING:Xst:737 - Found 1-bit latch for signal <PSR_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nzvc_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 Unit <Inst_PSRModifier> synthesized.
 
 
+Synthesizing Unit <PSR>.
+    Related source file is "H:/PSR.vhd".
+WARNING:Xst:646 - Signal <PSRegister<31:21>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <PSRegister<19:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <carry>.
+    Found 1-bit register for signal <PSRegister<20>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <PSR> synthesized.
+
+
 Synthesizing Unit <Procesador>.
     Related source file is "C:/Users/Smith/Documents/xilinx/ProcessorSmith/Procesador.vhd".
-WARNING:Xst:646 - Signal <PSR<31:21>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <PSR<19:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <Procesador> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -352,10 +358,11 @@ Macro Statistics
 # Adders/Subtractors                                   : 3
  32-bit adder                                          : 1
  32-bit addsub                                         : 2
-# Registers                                            : 2
+# Registers                                            : 4
+ 1-bit register                                        : 2
  32-bit register                                       : 2
-# Latches                                              : 36
- 1-bit latch                                           : 5
+# Latches                                              : 35
+ 1-bit latch                                           : 4
  32-bit latch                                          : 31
 # Multiplexers                                         : 2
  32-bit 32-to-1 multiplexer                            : 2
@@ -388,6 +395,8 @@ WARNING:Xst:1290 - Hierarchical block <Inst_Inst_Multiplexor21> is unconnected i
    It will be removed from the design.
 WARNING:Xst:1290 - Hierarchical block <Inst_Inst_PSRModifier> is unconnected in block <Procesador>.
    It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_PSR> is unconnected in block <Procesador>.
+   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -398,10 +407,10 @@ Macro Statistics
 # Adders/Subtractors                                   : 3
  32-bit adder                                          : 1
  32-bit addsub                                         : 2
-# Registers                                            : 64
- Flip-Flops                                            : 64
-# Latches                                              : 36
- 1-bit latch                                           : 5
+# Registers                                            : 66
+ Flip-Flops                                            : 66
+# Latches                                              : 35
+ 1-bit latch                                           : 4
  32-bit latch                                          : 31
 # Multiplexers                                         : 2
  32-bit 32-to-1 multiplexer                            : 2
@@ -423,6 +432,8 @@ Optimizing unit <ProgramCounter> ...
 Optimizing unit <Inst_PSRModifier> ...
 
 Optimizing unit <RegisterFile> ...
+WARNING:Xst:2677 - Node <Inst_PSR/carry> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_PSR/PSRegister_20> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_31> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_30> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_NProgramCounter/salida_29> of sequential type is unconnected in block <Procesador>.
@@ -487,11 +498,10 @@ WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_3> of sequential type is unc
 WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_2> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_1> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_ProgramCounter/salida_0> of sequential type is unconnected in block <Procesador>.
-WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/temp_V> of sequential type is unconnected in block <Procesador>.
-WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_20> of sequential type is unconnected in block <Procesador>.
-WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_21> of sequential type is unconnected in block <Procesador>.
-WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_22> of sequential type is unconnected in block <Procesador>.
-WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/PSR_23> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/nzvc_0> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/nzvc_1> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/nzvc_2> of sequential type is unconnected in block <Procesador>.
+WARNING:Xst:2677 - Node <Inst_Inst_PSRModifier/nzvc_3> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_31> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_30> of sequential type is unconnected in block <Procesador>.
 WARNING:Xst:2677 - Node <Inst_RegisterFile/registro_11_29> of sequential type is unconnected in block <Procesador>.
@@ -1573,14 +1583,14 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 21.66 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.39 secs
  
 --> 
 
-Total memory usage is 285312 kilobytes
+Total memory usage is 284744 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 1113 (   0 filtered)
+Number of warnings : 1115 (   0 filtered)
 Number of infos    :   33 (   0 filtered)
 
