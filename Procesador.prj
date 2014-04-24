@@ -1,5 +1,6 @@
-vhdl work "H:/PSR.vhd"
+vhdl work "windowManager.vhd"
 vhdl work "RegisterFile.vhd"
+vhdl work "PSR.vhd"
 vhdl work "ProgramCounter.vhd"
 vhdl work "Inst_SEU.vhd"
 vhdl work "Inst_PSRModifier.vhd"

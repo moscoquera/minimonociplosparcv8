@@ -1,5 +1,6 @@
-vhdl work "H:\PSR.vhd"
+vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\windowManager.vhd"
 vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\RegisterFile.vhd"
+vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\PSR.vhd"
 vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\ProgramCounter.vhd"
 vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\Inst_SEU.vhd"
 vhdl work "C:\Users\Smith\Documents\xilinx\ProcessorSmith\Inst_PSRModifier.vhd"

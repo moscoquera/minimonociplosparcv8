@@ -23,7 +23,11 @@ architecture Behavioral of Procesador is
 	signal salidamultSEU_RF: std_logic_vector (31 downto 0);
 	signal PSRnzvc: std_logic_vector(3 downto 0);
 	signal PSRCarryOut: std_logic;
+	signal PSRcwp: std_logic_vector(4 downto 0);
 	
+	signal WMnrs1: std_logic_vector(5 downto 0);
+	signal WMnrs2: std_logic_vector(5 downto 0);
+	signal WMnrd: std_logic_vector(5 downto 0);
 	
 	COMPONENT ArithmeticLogicUnit
 	PORT(
@@ -69,9 +73,9 @@ architecture Behavioral of Procesador is
 	
 	COMPONENT RegisterFile
 	PORT(
-		RSource1 : IN std_logic_vector(4 downto 0);
-		RSource2 : IN std_logic_vector(4 downto 0);
-		RDestino : IN std_logic_vector(4 downto 0);
+		RSource1 : IN std_logic_vector(5 downto 0);
+		RSource2 : IN std_logic_vector(5 downto 0);
+		RDestino : IN std_logic_vector(5 downto 0);
 		ValEntradaDestino : IN std_logic_vector(31 downto 0);
 		rst : IN std_logic;          
 		valRSource1 : OUT std_logic_vector(31 downto 0);
@@ -114,6 +118,21 @@ architecture Behavioral of Procesador is
 		carry : OUT std_logic
 		);
 	END COMPONENT;
+	
+	COMPONENT windowManager
+	PORT(
+		rs1 : IN std_logic_vector(4 downto 0);
+		rs2 : IN std_logic_vector(4 downto 0);
+		rd : IN std_logic_vector(4 downto 0);
+		op : IN std_logic_vector(1 downto 0);
+		op3 : IN std_logic_vector(5 downto 0);
+		cwp : IN std_logic_vector(4 downto 0);          
+		nrs1 : OUT std_logic_vector(5 downto 0);
+		nrs2 : OUT std_logic_vector(5 downto 0);
+		nrd : OUT std_logic_vector(5 downto 0);
+		ncwp : OUT std_logic_vector(4 downto 0)
+		);
+	END COMPONENT;
 
 	
 begin
@@ -152,9 +171,9 @@ begin
 	);
 	
 	Inst_RegisterFile: RegisterFile PORT MAP(
-		RSource1 => salidaIM(18 downto 14),
-		RSource2 => salidaIM(4 downto 0),
-		RDestino => salidaIM(29 downto 25),
+		RSource1 => WMnrs1,
+		RSource2 => WMnrs2,
+		RDestino => WMnrd,
 		ValEntradaDestino => resultadoAlu,
 		rst => rst,
 		valRSource1 => salidaRF1,
@@ -193,6 +212,20 @@ begin
 		RST => rst,
 		nzvc => PSRnzvc,
 		carry => PSRCarryOut
+	);
+	
+	
+	Inst_windowManager: windowManager PORT MAP(
+		rs1 =>  salidaIM(18 downto 14),
+		rs2 => salidaIM(4 downto 0),
+		rd => salidaIM(29 downto 25),
+		op => salidaIM(31 downto 30),
+		op3 => salidaIM(24 downto 19),
+		cwp => PSRcwp,
+		nrs1 => WMnrs1,
+		nrs2 => WMnrs2,
+		nrd => WMnrd,
+		ncwp => PSRcwp
 	);
 	
 end Behavioral;
