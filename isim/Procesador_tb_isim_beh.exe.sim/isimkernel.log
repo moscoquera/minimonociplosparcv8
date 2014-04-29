@@ -1,0 +1,10 @@
+Command line:
+   Procesador_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  23586
+
+Tue Apr 29 11:40:39 2014
+
+
+ Elaboration Time: 0.1872 sec

@@ -1,0 +1,46 @@
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_isim_beh.exe -prj C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_beh.prj work.Procesador_tb 
+ISim P.68d (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/windowManager.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/RegisterFile.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/PSR.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/ProgramCounter.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Inst_SEU.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Inst_PSRModifier.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Inst_Multiplexor21.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/InstructionMemory.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/incrementador.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/ControlUnit.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/ArithmeticLogicUnit.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 118660 KB
+Fuse CPU Usage: 312 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling architecture behavioral of entity ArithmeticLogicUnit [arithmeticlogicunit_default]
+Compiling architecture behavioral of entity ControlUnit [controlunit_default]
+Compiling architecture behavioral of entity InstructionMemory [instructionmemory_default]
+Compiling architecture behavioral of entity ProgramCounter [programcounter_default]
+Compiling architecture behavioral of entity RegisterFile [registerfile_default]
+Compiling architecture behavioral of entity incrementador [incrementador_default]
+Compiling architecture behavioral of entity Inst_SEU [inst_seu_default]
+Compiling architecture behavioral of entity Inst_Multiplexor21 [inst_multiplexor21_default]
+Compiling architecture behavioral of entity Inst_PSRModifier [inst_psrmodifier_default]
+Compiling architecture behavioral of entity PSR [psr_default]
+Compiling architecture behavioral of entity windowManager [windowmanager_default]
+Compiling architecture behavioral of entity Procesador [procesador_default]
+Compiling architecture behavior of entity procesador_tb
+Time Resolution for simulation is 1ps.
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 30 VHDL Units
+Built simulation executable C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_isim_beh.exe
+Fuse Memory Usage: 136884 KB
+Fuse CPU Usage: 702 ms

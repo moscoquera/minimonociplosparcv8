@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="procesador_tb" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/procesador_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/aluout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">aluout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">aluout[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/valentradadestino" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">valentradadestino[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valentradadestino[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">registro[0:39]</obj_property>
+      <obj_property name="ObjectShortName">registro[0:39]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">registro[0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">registro[1]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">registro[2]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">registro[3]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">registro[4]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">registro[5]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">registro[6]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">registro[7]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">registro[8]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">registro[9]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">registro[10]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">registro[11]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">registro[12]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">registro[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">registro[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">registro[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[16]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">registro[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[17]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">registro[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[18]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">registro[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[19]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">registro[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[20]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">registro[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[21]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">registro[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[22]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">registro[22]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[23]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">registro[23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[24]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">registro[24]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[25]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">registro[25]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[26]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">registro[26]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[27]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">registro[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[28]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">registro[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[29]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">registro[29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[30]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">registro[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[31]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">registro[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[32]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[32]</obj_property>
+         <obj_property name="ObjectShortName">registro[32]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[33]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[33]</obj_property>
+         <obj_property name="ObjectShortName">registro[33]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[34]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[34]</obj_property>
+         <obj_property name="ObjectShortName">registro[34]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[35]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[35]</obj_property>
+         <obj_property name="ObjectShortName">registro[35]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[36]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[36]</obj_property>
+         <obj_property name="ObjectShortName">registro[36]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[37]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[37]</obj_property>
+         <obj_property name="ObjectShortName">registro[37]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[38]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[38]</obj_property>
+         <obj_property name="ObjectShortName">registro[38]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/registro[39]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[39]</obj_property>
+         <obj_property name="ObjectShortName">registro[39]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_ArithmeticLogicUnit/val1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">val1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_ArithmeticLogicUnit/val2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">val2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">val2[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/valrsource1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">valrsource1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valrsource1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/valrsource2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">valrsource2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valrsource2[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/rsource1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rsource1[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rsource1[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_RegisterFile/rsource2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rsource2[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rsource2[5:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_Inst_Multiplexor21/selector" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">selector</obj_property>
+      <obj_property name="ObjectShortName">selector</obj_property>
+   </wvobject>
+</wave_config>
