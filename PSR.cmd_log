@@ -1,0 +1,2 @@
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/PSR.vhi -module PSR -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work H:/PSR.vhd 
+vhdtdtfi -prj ProcesadorMonoSparc8 -o C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/PSR.vhi -module PSR -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work PSR.vhd 

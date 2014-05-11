@@ -40,13 +40,15 @@ entity windowManager is
            nrs1 : out  STD_LOGIC_VECTOR (5 downto 0);
            nrs2 : out  STD_LOGIC_VECTOR (5 downto 0);
            nrd : out  STD_LOGIC_VECTOR (5 downto 0);
+			  n15 : out  STD_LOGIC_VECTOR (5 downto 0);
            ncwp : out  STD_LOGIC_VECTOR (4 downto 0));
 end windowManager;
 
 architecture Behavioral of windowManager is
 
 -- señales auxiliares para los registros de 40 
-signal registerSource1Aux,registerSource2Aux,registerDestinationAux: integer range 0 to 39:=0;
+signal registerSource1Aux,registerSource2Aux,registerDestinationAux,register15Aux: integer range 0 to 39:=0;
+
 signal resop: std_logic_vector(31 downto 0);
 
 begin
@@ -64,7 +66,7 @@ process(rs1, rs2, rd, cwp,op,op3)
 		else
 			ncwp <= cwp;
 		end if;
-	end if;
+
 	
 	if(rs1>="00000" and rs1<="00111") then
 		registerSource1Aux <= conv_integer(unsigned(rs1));
@@ -99,6 +101,10 @@ process(rs1, rs2, rd, cwp,op,op3)
 		end if;
 	end if;
 	
+
+	register15Aux <= 15+(conv_integer(unsigned(cwp))*16);
+
+	
 	
 	if(rd>="00000" and rd<="00111") then
 		registerDestinationAux <= conv_integer(unsigned(rd));
@@ -115,14 +121,14 @@ process(rs1, rs2, rd, cwp,op,op3)
 			end if;
 		end if;
 	end if;
-
 	
+	end if;
 end process;
 
 nrs1 <= conv_std_logic_vector(registerSource1Aux, 6);
 nrs2 <= conv_std_logic_vector(registerSource2Aux, 6);
 nrd  <= conv_std_logic_vector(registerDestinationAux, 6);
-
+n15 <= conv_std_logic_vector(register15Aux,6);
 
 end Behavioral;
 

@@ -15,18 +15,22 @@ ARCHITECTURE behavior OF Procesador_tb IS
     -- Component Declaration for the Unit Under Test (UUT)
  
     COMPONENT Procesador
+
 	PORT(
 		rst : IN std_logic;
 		clk : IN std_logic;          
 		ALUout : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
-    
 
+   
    --Inputs
    signal rst : std_logic := '0';
    signal clk : std_logic := '0';
+
 	signal ALUout: std_logic_vector(31 downto 0);
+
+
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -36,8 +40,10 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: Procesador PORT MAP (
           rst => rst,
+
           clk => clk,
 			 ALUout => ALUout
+
         );
 
    -- Clock process definitions

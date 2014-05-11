@@ -1,0 +1,7 @@
+vhdtdtfi -lib work windowManager.vhd -prj ProcessorSmith -o windowManager.spl -module windowManager -template C:/Xilinx/14.6/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e windowManager.spl C:/Users/Smith/Documents/xilinx/ProcessorSmith/windowManager.sym 
+vhdtdtfi -lib work windowManager.vhd -prj ProcessorSmith -o windowManager.spl -module windowManager -template C:/Xilinx/14.6/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e windowManager.spl C:/Users/Smith/Documents/xilinx/ProcessorSmith/windowManager.sym 
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/windowManager.vhi -module windowManager -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work windowManager.vhd 
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/windowManager.vhi -module windowManager -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work windowManager.vhd 
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/windowManager.vhi -module windowManager -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work windowManager.vhd 

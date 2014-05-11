@@ -1,0 +1,5 @@
+vhdtdtfi -lib work Inst_Multiplexor21.vhd -prj ProcessorSmith -o Inst_Multiplexor21.spl -module Inst_Multiplexor21 -template C:/Xilinx/14.6/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Inst_Multiplexor21.spl C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_Multiplexor21.sym 
+vhdtdtfi -lib work Inst_Multiplexor21.vhd -prj ProcessorSmith -o Inst_Multiplexor21.spl -module Inst_Multiplexor21 -template C:/Xilinx/14.6/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Inst_Multiplexor21.spl C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_Multiplexor21.sym 
+vhdtdtfi -prj ProcessorSmith -o C:/Users/Smith/Documents/xilinx/ProcessorSmith/Inst_Multiplexor21.vhi -module Inst_Multiplexor21 -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Inst_Multiplexor21.vhd 

@@ -5,9 +5,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Procesador is
     Port ( rst : in  STD_LOGIC;
+
            clk : in  STD_LOGIC;
 			  ALUout: out STD_LOGIC_VECTOR(31 downto 0)
 			  );
+
 end Procesador;
 
 architecture Behavioral of Procesador is
@@ -27,7 +29,25 @@ architecture Behavioral of Procesador is
 	signal PSRCarryOut: std_logic;
 	signal PSRcwp: std_logic_vector(4 downto 0);
 	signal PSRncwp: std_logic_vector(4 downto 0);
+
+
+	signal salidaSEU22disp22: std_logic_vector(31 downto 0);
+	signal salidaSEU30disp30: std_logic_vector(31 downto 0);
+
+	signal muxPCSourcePCAddressOut: std_logic_vector(31 downto 0);
+	signal muxPCSourcePCSource: std_logic_vector(1 downto 0);
 	
+	signal SalidaDataMemory: std_logic_vector (31 downto 0);
+	signal SelectorDataMux: std_logic_vector (1 downto 0);
+	signal SelectorWRENRF: std_logic;
+	signal SelectorWRENDTMEM: std_logic;
+	signal SalidaDataMUX: std_logic_vector (31 downto 0);
+	signal valorRFRdest: std_logic_vector (31 downto 0);
+	
+	signal SelectorCURes: std_logic;
+	signal PSRicc : std_logic_vector (3 downto 0);
+	signal SalidaMUXWM: std_logic_vector (5 downto 0);
+	signal WMn15: std_logic_vector (5 downto 0);
 	signal WMnrs1: std_logic_vector(5 downto 0);
 	signal WMnrs2: std_logic_vector(5 downto 0);
 	signal WMnrd: std_logic_vector(5 downto 0);
@@ -39,14 +59,6 @@ architecture Behavioral of Procesador is
 		Carry : IN std_logic;
 		OP : IN std_logic_vector(5 downto 0);          
 		Salida : OUT std_logic_vector(31 downto 0)
-		);
-	END COMPONENT;
-
-	COMPONENT ControlUnit
-	PORT(
-		opcode : IN std_logic_vector(1 downto 0);
-		op3 : IN std_logic_vector(5 downto 0);          
-		salida : OUT std_logic_vector(5 downto 0)
 		);
 	END COMPONENT;
 	
@@ -82,7 +94,8 @@ architecture Behavioral of Procesador is
 		ValEntradaDestino : IN std_logic_vector(31 downto 0);
 		rst : IN std_logic;          
 		valRSource1 : OUT std_logic_vector(31 downto 0);
-		valRSource2 : OUT std_logic_vector(31 downto 0)
+		valRSource2 : OUT std_logic_vector(31 downto 0);
+		valRDest : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
 	
@@ -113,13 +126,14 @@ architecture Behavioral of Procesador is
 		);
 	END COMPONENT;
 
-	COMPONENT PSR
+COMPONENT PSR
 	PORT(
 		CLK : IN std_logic;
 		RST : IN std_logic;
-		nzvc : IN std_logic_vector(3 downto 0);    
-		cwp : out std_logic_vector(4 downto 0);      
-		ncwp : in std_logic_vector (4 downto 0);
+		nzvc : IN std_logic_vector(3 downto 0);
+		ncwp : IN std_logic_vector(4 downto 0);          
+		cwp : OUT std_logic_vector(4 downto 0);
+		icc : OUT std_logic_vector(3 downto 0);
 		carry : OUT std_logic
 		);
 	END COMPONENT;
@@ -135,18 +149,94 @@ architecture Behavioral of Procesador is
 		nrs1 : OUT std_logic_vector(5 downto 0);
 		nrs2 : OUT std_logic_vector(5 downto 0);
 		nrd : OUT std_logic_vector(5 downto 0);
-		ncwp : OUT std_logic_vector(4 downto 0)
+		ncwp : OUT std_logic_vector(4 downto 0);
+		n15 : OUT std_logic_vector(5 downto 0)
 		);
 	END COMPONENT;
 
+
+	COMPONENT SEU22
+	PORT(
+		entrada : IN std_logic_vector(21 downto 0);
+		salida : out std_logic_vector(31 downto 0)       
+		);
+	END COMPONENT;
+	
+	
+	COMPONENT SEU30
+	PORT(
+		entrada : IN std_logic_vector(29 downto 0);
+		salida : out std_logic_vector(31 downto 0)      
+		);
+	END COMPONENT;
+	
+	
+	COMPONENT muxPcSource
+	PORT(
+		PCDisp30 : IN std_logic_vector(31 downto 0);
+		PCDisp22 : IN std_logic_vector(31 downto 0);
+		PC : IN std_logic_vector(31 downto 0);
+		PCAddress : IN std_logic_vector(31 downto 0);
+		PCSource : IN std_logic_vector(1 downto 0);          
+		PCAddressOut : OUT std_logic_vector(31 downto 0)
+		);
+	END COMPONENT;
+	
+	COMPONENT ControlUnit
+	PORT(
+		opcode : IN std_logic_vector(1 downto 0);
+		op3 : IN std_logic_vector(5 downto 0);
+		icc : IN std_logic_vector(3 downto 0);          
+		salida : OUT std_logic_vector(5 downto 0);
+		PCSourceOut : OUT std_logic_vector(1 downto 0);
+		WRENRF : OUT std_logic;
+		WRENDTMEM : OUT std_logic;
+		DATATORF : OUT std_logic_vector(1 downto 0);
+		SelResource : OUT std_logic
+		);
+	END COMPONENT;
+	
+	COMPONENT dataMemory
+	PORT(
+		clk : IN std_logic;
+		reset : IN std_logic;
+		wrEnMem : IN std_logic;
+		address : IN std_logic_vector(31 downto 0);
+		cRD : IN std_logic_vector(31 downto 0);          
+		dataMem : OUT std_logic_vector(31 downto 0)
+		);
+	END COMPONENT;
+	
+	COMPONENT MUXDataMemory
+	PORT(
+		DataMemory : IN std_logic_vector(31 downto 0);
+		AluResult : IN std_logic_vector(31 downto 0);
+		PC : IN std_logic_vector(31 downto 0);
+		DataToRFSource : IN std_logic_vector(1 downto 0);          
+		RFData : OUT std_logic_vector(31 downto 0)
+		);
+	END COMPONENT;
+	
+	
+	COMPONENT muxWindowsManager
+	PORT(
+		nrd : IN std_logic_vector(5 downto 0);
+		registro15 : IN std_logic_vector(5 downto 0);
+		resource : IN std_logic;          
+		destino : OUT std_logic_vector(5 downto 0)
+		);
+	END COMPONENT;
 	
 begin
 
-	process(resultadoAlu)
+
+	process(SalidaDataMUX)
 	begin
-	ALUout <= resultadoAlu;
+	ALUout <= SalidaDataMUX;
 	end process;
 	
+
+
 	Inst_ArithmeticLogicUnit: ArithmeticLogicUnit PORT MAP(
 		Val1 => salidaRF1,
 		Val2 => salidamultSEU_RF,
@@ -158,7 +248,13 @@ begin
 	Inst_ControlUnit: ControlUnit PORT MAP(
 		opcode => salidaIM(31 downto 30),
 		op3 => salidaIM(24 downto 19),
-		salida => CUSalOP
+		salida => CUSalOP,
+		PCSourceOut => muxPCSourcePCSource,
+		WRENRF => SelectorWRENRF,
+		WRENDTMEM => SelectorWRENDTMEM,
+		DATATORF => SelectorDataMux,
+		icc =>PSRicc,
+		SelResource => SelectorCURes
 	);
 	
 	Inst_InstructionMemory: InstructionMemory PORT MAP(
@@ -175,7 +271,7 @@ begin
 	);
 	
 	Inst_NProgramCounter: ProgramCounter PORT MAP(
-		entrada => salidaIncrementador,
+		entrada => muxPCSourcePCAddressOut,
 		clk => clk,
 		rst => rst,
 		salida => salidaNPC
@@ -184,11 +280,12 @@ begin
 	Inst_RegisterFile: RegisterFile PORT MAP(
 		RSource1 => WMnrs1,
 		RSource2 => WMnrs2,
-		RDestino => WMnrd,
-		ValEntradaDestino => resultadoAlu,
+		RDestino => SalidaMUXWM,
+		ValEntradaDestino => SalidaDataMUX,
 		rst => rst,
 		valRSource1 => salidaRF1,
-		valRSource2 => salidaRF2
+		valRSource2 => salidaRF2,
+		valRDest =>valorRFRdest
 	);
 	
 	Inst_incrementador: incrementador PORT MAP(
@@ -222,8 +319,10 @@ begin
 		CLK => clk,
 		RST => rst,
 		nzvc => PSRnzvc,
+
 		cwp => PSRcwp,
 		ncwp => PSRncwp,
+		icc => PSRicc,
 		carry => PSRCarryOut
 	);
 	
@@ -238,8 +337,57 @@ begin
 		nrs1 => WMnrs1,
 		nrs2 => WMnrs2,
 		nrd => WMnrd,
+		n15 => WMn15,
 		ncwp => PSRncwp
+
 	);
+	
+	
+	Inst_SEU22: SEU22 PORT MAP(
+		entrada => salidaIM(21 downto 0),
+		salida => salidaSEU22disp22
+	);
+	
+	Inst_SEU30: SEU30 PORT MAP(
+		entrada => salidaIM(29 downto 0),
+		salida => salidaSEU30disp30
+	);
+	
+	
+	Inst_muxPcSource: muxPcSource PORT MAP(
+		PCDisp30 => salidaSEU30disp30,
+		PCDisp22 => salidaSEU22disp22,
+		PC => salidaIncrementador,
+		PCAddress => resultadoAlu,
+		PCSource => muxPCSourcePCSource,
+		PCAddressOut => muxPCSourcePCAddressOut
+	);
+	
+	Inst_dataMemory: dataMemory PORT MAP(
+		clk => clk,
+		reset => rst,
+		wrEnMem => SelectorWRENDTMEM,
+		address => resultadoAlu,
+		cRD => valorRFRdest,
+		dataMem => SalidaDataMemory
+	);
+	
+	Inst_MUXDataMemory: MUXDataMemory PORT MAP(
+		DataMemory => SalidaDataMemory,
+		AluResult => resultadoAlu,
+		DataToRFSource => SelectorDataMux,
+		RFData => SalidaDataMUX,
+		PC => salidaPC
+	);
+	
+	
+		Inst_muxWindowsManager: muxWindowsManager PORT MAP(
+		nrd => WMnrd,
+		registro15 => WMn15,
+		resource => SelectorCURes,
+		destino => SalidaMUXWM
+	);
+
 	
 end Behavioral;
 
