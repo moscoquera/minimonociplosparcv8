@@ -92,7 +92,8 @@ architecture Behavioral of Procesador is
 		RSource2 : IN std_logic_vector(5 downto 0);
 		RDestino : IN std_logic_vector(5 downto 0);
 		ValEntradaDestino : IN std_logic_vector(31 downto 0);
-		rst : IN std_logic;          
+		rst : IN std_logic;
+		WREnable : IN std_logic;          
 		valRSource1 : OUT std_logic_vector(31 downto 0);
 		valRSource2 : OUT std_logic_vector(31 downto 0);
 		valRDest : OUT std_logic_vector(31 downto 0)
@@ -285,7 +286,8 @@ begin
 		rst => rst,
 		valRSource1 => salidaRF1,
 		valRSource2 => salidaRF2,
-		valRDest =>valorRFRdest
+		valRDest =>valorRFRdest,
+		WREnable=>SelectorWRENRF
 	);
 	
 	Inst_incrementador: incrementador PORT MAP(

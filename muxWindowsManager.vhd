@@ -44,12 +44,10 @@ process(nrd, registro15, resource)
 begin
 
 	if(resource = '0')then
-				destino <= nrd;
-			else
-				if(resource = '1')then
-					destino <= registro15;
-				end if;
-			end if;
+		destino <= nrd;
+	else
+		destino <= registro15;
+	end if;
 
 end process;
 

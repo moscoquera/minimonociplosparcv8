@@ -1,25 +1,31 @@
-Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_isim_beh.exe -prj C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_beh.prj work.Procesador_tb 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_isim_beh.exe" -prj "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_beh.prj" "work.Procesador_tb" 
 ISim P.68d (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/windowManager.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/SEU30.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/SEU22.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/RegisterFile.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/PSR.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/ProgramCounter.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/muxWindowsManager.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/muxPcSource.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/MUXDataMemory.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Inst_SEU.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Inst_PSRModifier.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Inst_Multiplexor21.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/InstructionMemory.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/incrementador.vhd" into library work
+Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/dataMemory.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/ControlUnit.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/ArithmeticLogicUnit.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador.vhd" into library work
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 121520 KB
-Fuse CPU Usage: 421 ms
+Fuse Memory Usage: 121640 KB
+Fuse CPU Usage: 342 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -36,11 +42,17 @@ Compiling architecture behavioral of entity Inst_Multiplexor21 [inst_multiplexor
 Compiling architecture behavioral of entity Inst_PSRModifier [inst_psrmodifier_default]
 Compiling architecture behavioral of entity PSR [psr_default]
 Compiling architecture behavioral of entity windowManager [windowmanager_default]
+Compiling architecture behavioral of entity SEU22 [seu22_default]
+Compiling architecture behavioral of entity SEU30 [seu30_default]
+Compiling architecture behavioral of entity muxPcSource [muxpcsource_default]
+Compiling architecture behavioral of entity dataMemory [datamemory_default]
+Compiling architecture behavioral of entity MUXDataMemory [muxdatamemory_default]
+Compiling architecture behavioral of entity muxWindowsManager [muxwindowsmanager_default]
 Compiling architecture behavioral of entity Procesador [procesador_default]
 Compiling architecture behavior of entity procesador_tb
 Time Resolution for simulation is 1ps.
-Waiting for 10 sub-compilation(s) to finish...
-Compiled 30 VHDL Units
+Waiting for 16 sub-compilation(s) to finish...
+Compiled 42 VHDL Units
 Built simulation executable C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_isim_beh.exe
-Fuse Memory Usage: 140768 KB
-Fuse CPU Usage: 779 ms
+Fuse Memory Usage: 140696 KB
+Fuse CPU Usage: 982 ms

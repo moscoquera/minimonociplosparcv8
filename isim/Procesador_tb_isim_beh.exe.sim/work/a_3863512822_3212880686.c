@@ -34,17 +34,17 @@ static void work_a_3863512822_3212880686_p_0(char *t0)
     char *t5;
     char *t6;
 
-LAB0:    xsi_set_current_line(154, ng0);
-    t1 = (t0 + 1512U);
+LAB0:    xsi_set_current_line(236, ng0);
+    t1 = (t0 + 2892U);
     t2 = *((char **)t1);
-    t1 = (t0 + 3240);
+    t1 = (t0 + 4528);
     t3 = (t1 + 32U);
     t4 = *((char **)t3);
     t5 = (t4 + 40U);
     t6 = *((char **)t5);
     memcpy(t6, t2, 32U);
     xsi_driver_first_trans_fast_port(t1);
-    t1 = (t0 + 3196);
+    t1 = (t0 + 4484);
     *((int *)t1) = 1;
 
 LAB1:    return;

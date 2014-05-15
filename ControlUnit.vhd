@@ -25,7 +25,14 @@ begin
 			if(opcode = "10") then
 				salida <= op3;
 			else
-				salida <= "111111";
+				salida <= "000000";
+			end if;
+			
+			--determina el selector para la entrada al RF
+			if (opcode="01") then
+				SelResource <= '1'; 
+			else 
+				SelResource <= '0';
 			end if;
 			
 			
@@ -46,9 +53,8 @@ begin
 			
 			--determina las acciones del load y store
 			if (opcode = "11") then
-				WRENDTMEM <= not op3(2); -- creo que cuando el op3(2) esta en 0 es un load, sino es un store
-				WRENRF <= op3(2); -- no lo activo si es un load
-				--0 solo si es un load
+				WRENDTMEM <= op3(2); -- creo que cuando el op3(2) esta en 0 es un load, sino es un store
+				WRENRF <= not op3(2); -- lo activo en los load
 				if op3(2) = '0' then
 					DATATORF <= "00";
 				else

@@ -50,9 +50,9 @@ signal ramMemory : ram_type:=(others => x"00000000");
 
 begin
 
-process(clk)
+process(clk,address,cRD)
 	begin
-		if(rising_edge(clk)) then
+	if(clk='1') then
 			if(reset = '1')then
 					dataMem <= (others => '0');
 					ramMemory <= (others => x"00000000");
@@ -60,6 +60,7 @@ process(clk)
 					if(wrEnMem = '0')then
 						dataMem <= ramMemory(conv_integer(address(5 downto 0)));
 					else
+				--		dataMem <= cRD; --añadido para solucionar un problema de sincronizacion, en teoria deberia poder ser eliminado
 						ramMemory(conv_integer(address(5 downto 0))) <= cRD;
 					end if;
 				end if;
