@@ -1,2 +1,3 @@
 vhdtdtfi -prj ProcesadorMonoSparc8 -o C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/muxPcSource.vhi -module muxPcSource -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work muxPcSource.vhd 
 vhdtdtfi -prj ProcesadorMonoSparc8 -o C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/muxPcSource.vhi -module muxPcSource -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work muxPcSource.vhd 
+vhdtdtfi -prj ProcesadorMonoSparc8 -o C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/muxPcSource.vhi -module muxPcSource -template C:/Xilinx/14.6/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work muxPcSource.vhd 

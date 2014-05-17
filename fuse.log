@@ -24,8 +24,8 @@ Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesad
 Parsing VHDL file "C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 121640 KB
-Fuse CPU Usage: 342 ms
+Fuse Memory Usage: 121832 KB
+Fuse CPU Usage: 389 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
@@ -51,8 +51,8 @@ Compiling architecture behavioral of entity muxWindowsManager [muxwindowsmanager
 Compiling architecture behavioral of entity Procesador [procesador_default]
 Compiling architecture behavior of entity procesador_tb
 Time Resolution for simulation is 1ps.
-Waiting for 16 sub-compilation(s) to finish...
+Waiting for 14 sub-compilation(s) to finish...
 Compiled 42 VHDL Units
 Built simulation executable C:/Users/Smith/Documents/xilinx/ProcesadorMonoSparc8/Procesador_tb_isim_beh.exe
-Fuse Memory Usage: 140696 KB
-Fuse CPU Usage: 982 ms
+Fuse Memory Usage: 140056 KB
+Fuse CPU Usage: 873 ms
