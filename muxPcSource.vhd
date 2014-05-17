@@ -34,6 +34,7 @@ entity muxPcSource is
     Port ( PCDisp30 : in  STD_LOGIC_VECTOR (31 downto 0);
            PCDisp22 : in  STD_LOGIC_VECTOR (31 downto 0);
            PC : in  STD_LOGIC_VECTOR (31 downto 0);
+           nPC : in  STD_LOGIC_VECTOR (31 downto 0);
            PCAddress : in  STD_LOGIC_VECTOR (31 downto 0);
            PCSource : in  STD_LOGIC_VECTOR (1 downto 0);
            PCAddressOut : out  STD_LOGIC_VECTOR (31 downto 0));
@@ -45,7 +46,7 @@ signal tmpSUMDisp30: std_logic_vector (31 downto 0);
 signal tmpSUMDisp22: std_logic_vector (31 downto 0);
 begin
 
-process(PCDisp30, PCDisp22, PC, PCAddress, PCSource)
+process(PCDisp30, PCDisp22, PC,nPC, PCAddress, PCSource)
 begin
 
 	tmpSUMDisp30 <= (PCDisp30+PC);
@@ -59,9 +60,9 @@ begin
 			when "10" =>
 				PCAddressOut <= tmpSUMDisp22;
 			when "11" =>
-				PCAddressOut <= PC;
+				PCAddressOut <= nPC;
 			when others =>
-				PCAddressOut <= PC;
+				PCAddressOut <= nPC;
 		end case;
 
 	

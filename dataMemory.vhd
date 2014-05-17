@@ -45,28 +45,35 @@ end dataMemory;
 architecture Behavioral of dataMemory is
 
 
-type ram_type is array (0 to 31) of std_logic_vector (31 downto 0);
+type ram_type is array (0 to 63) of std_logic_vector (31 downto 0);
 signal ramMemory : ram_type:=(others => x"00000000");
 
 begin
 
-process(clk,address,cRD)
+process(address,reset)
 	begin
-	if(clk='1') then
+	--if(rising_edge(clk)) then
 			if(reset = '1')then
 					dataMem <= (others => '0');
-					ramMemory <= (others => x"00000000");
-				else
-					if(wrEnMem = '0')then
-						dataMem <= ramMemory(conv_integer(address(5 downto 0)));
-					else
-				--		dataMem <= cRD; --añadido para solucionar un problema de sincronizacion, en teoria deberia poder ser eliminado
-						ramMemory(conv_integer(address(5 downto 0))) <= cRD;
-					end if;
-				end if;
-		end if;
+			else
+				--if(wrEnMem = '0')then
+					dataMem <= ramMemory(conv_integer(address(5 downto 0)));
+				--end if;
+			end if;
+	--end if;
+	
 end process;
 
+process (clk,address,cRD)
+begin
+if (falling_edge(clk)) then
+	if(reset = '1')then
+			ramMemory <= (others => x"00000000");
+	elsif(wrEnMem = '1')then
+			ramMemory(conv_integer(address(5 downto 0))) <= cRD;
+	end if;
+end if;
+end process;
 
 end Behavioral;
 

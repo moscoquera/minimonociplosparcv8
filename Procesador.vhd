@@ -93,7 +93,8 @@ architecture Behavioral of Procesador is
 		RDestino : IN std_logic_vector(5 downto 0);
 		ValEntradaDestino : IN std_logic_vector(31 downto 0);
 		rst : IN std_logic;
-		WREnable : IN std_logic;          
+		WREnable : IN std_logic;
+		clk : IN std_logic;          
 		valRSource1 : OUT std_logic_vector(31 downto 0);
 		valRSource2 : OUT std_logic_vector(31 downto 0);
 		valRDest : OUT std_logic_vector(31 downto 0)
@@ -171,23 +172,26 @@ COMPONENT PSR
 		);
 	END COMPONENT;
 	
-	
-	COMPONENT muxPcSource
+		COMPONENT muxPcSource
 	PORT(
 		PCDisp30 : IN std_logic_vector(31 downto 0);
 		PCDisp22 : IN std_logic_vector(31 downto 0);
 		PC : IN std_logic_vector(31 downto 0);
+		nPC : IN std_logic_vector(31 downto 0);
 		PCAddress : IN std_logic_vector(31 downto 0);
 		PCSource : IN std_logic_vector(1 downto 0);          
 		PCAddressOut : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
+
+	
 	
 	COMPONENT ControlUnit
 	PORT(
 		opcode : IN std_logic_vector(1 downto 0);
 		op3 : IN std_logic_vector(5 downto 0);
-		icc : IN std_logic_vector(3 downto 0);          
+		icc : IN std_logic_vector(3 downto 0);
+		cond : IN std_logic_vector(3 downto 0);          
 		salida : OUT std_logic_vector(5 downto 0);
 		PCSourceOut : OUT std_logic_vector(1 downto 0);
 		WRENRF : OUT std_logic;
@@ -255,7 +259,8 @@ begin
 		WRENDTMEM => SelectorWRENDTMEM,
 		DATATORF => SelectorDataMux,
 		icc =>PSRicc,
-		SelResource => SelectorCURes
+		SelResource => SelectorCURes,
+		cond => salidaIM(28 downto 25)
 	);
 	
 	Inst_InstructionMemory: InstructionMemory PORT MAP(
@@ -287,7 +292,8 @@ begin
 		valRSource1 => salidaRF1,
 		valRSource2 => salidaRF2,
 		valRDest =>valorRFRdest,
-		WREnable=>SelectorWRENRF
+		WREnable=>SelectorWRENRF,
+		clk => clk
 	);
 	
 	Inst_incrementador: incrementador PORT MAP(
@@ -359,7 +365,8 @@ begin
 	Inst_muxPcSource: muxPcSource PORT MAP(
 		PCDisp30 => salidaSEU30disp30,
 		PCDisp22 => salidaSEU22disp22,
-		PC => salidaIncrementador,
+		nPC => salidaIncrementador,
+		PC => salidaPC,
 		PCAddress => resultadoAlu,
 		PCSource => muxPCSourcePCSource,
 		PCAddressOut => muxPCSourcePCAddressOut

@@ -14,11 +14,12 @@ begin
 
 process (clk,rst,entrada)
 begin
-		if (rst = '1')then
-			salida <=  "00000000000000000000000000000000";
-		else if (rising_edge(clk))then
-				salida <=	entrada;
-			end if;
+		if (rising_edge(clk))then
+				if (rst = '1')then
+					salida <=  "00000000000000000000000000000000";
+				else 
+					salida <=	entrada;
+				end if;
 		end if;
 end process;
 
