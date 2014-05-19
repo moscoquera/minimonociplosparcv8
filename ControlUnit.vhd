@@ -7,6 +7,7 @@ use ieee.std_logic_unsigned.all;
 entity ControlUnit is
     Port ( opcode : in  STD_LOGIC_VECTOR (1 downto 0);
            op3  : in  STD_LOGIC_VECTOR (5 downto 0);
+			  op2: in STD_LOGIC_VECTOR (2 downto 0);
 			  icc : in std_logic_vector (3 downto 0);
 			  cond: in std_logic_vector (3 downto 0);
            salida : out  STD_LOGIC_VECTOR (5 downto 0);
@@ -51,8 +52,16 @@ begin
 			elsif opcode = "00"then
 				WRENRF <= '0';
 				WRENDTMEM <= '0';
-			else
-			  DATATORF <= "11"; -- selector del multiplexor entre el dataMem o la salida de la ALU, debe ser el resultado de la ALU
+			elsif opcode = "01" then
+				DATATORF <= "10"; -- selector del multiplexor entre el dataMem o la salida de la ALU, debe ser el resultado de la ALU
+				WRENRF <= '1';
+				WRENDTMEM <= '0';
+			else --opcode = "10"
+				if (op3="111000") then
+					DATATORF <= "10";
+				else
+					DATATORF <= "11"; -- selector del multiplexor entre el dataMem o la salida de la ALU, debe ser el resultado de la ALU
+			  end if;
 			  WRENRF <= '1';
 			  WRENDTMEM <= '0';
 			  
@@ -66,26 +75,33 @@ begin
 				PCSourceOut <= "01";
 			else
 				if (opcode = "00") then
-					--si es un branch
-					if (cond="1000") 
-					or (cond="1001" and not icc(2)='1')
-					or (cond="0001" and icc(2)='1')
-					or (cond="1010" and not (icc(2)='1' or (icc(3)='1' xor icc(1)='1')))
-					or (cond="0010" and (icc(2)='1' or (icc(3)='1' xor icc(1)='1')))
-					or (cond="1011" and not (icc(3)='1' xor icc(1)='1'))
-					or (cond="0011" and (icc(3)='1' xor icc(1)='1'))
-					or (cond="1100" and not (icc(0)='1' or icc(2)='1'))
-					or (cond="0100" and (icc(0)='1' or icc(2)='1'))
-					or (cond="1101" and not icc(0)='1')
-					or (cond="0101" and icc(0)='1')
-					or (cond="1110" and not icc(3)='1')
-					or (cond="0110" and icc(3)='1')
-					or (cond="1111" and not icc(1)='1')
-					or (cond="0111" and icc(1)='1')
-					then
-						PCSourceOut <= "10";
+					if (op2="010") then
+						--si es un branch
+						if (cond="1000") 
+						or (cond="1001" and not icc(2)='1')
+						or (cond="0001" and icc(2)='1')
+						or (cond="1010" and not (icc(2)='1' or (icc(3)='1' xor icc(1)='1')))
+						or (cond="0010" and (icc(2)='1' or (icc(3)='1' xor icc(1)='1')))
+						or (cond="1011" and not (icc(3)='1' xor icc(1)='1'))
+						or (cond="0011" and (icc(3)='1' xor icc(1)='1'))
+						or (cond="1100" and not (icc(0)='1' or icc(2)='1'))
+						or (cond="0100" and (icc(0)='1' or icc(2)='1'))
+						or (cond="1101" and not icc(0)='1')
+						or (cond="0101" and icc(0)='1')
+						or (cond="1110" and not icc(3)='1')
+						or (cond="0110" and icc(3)='1')
+						or (cond="1111" and not icc(1)='1')
+						or (cond="0111" and icc(1)='1')
+						then
+							PCSourceOut <= "10";
+						else
+							PCSourceOut <= "11";
+						end if;
 					else
 						PCSourceOut <= "11";
+						WRENRF <= '0';
+						WRENDTMEM <= '0';
+			  
 					end if;
 				else
 					if(opcode="10" and op3="111000") then

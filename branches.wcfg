@@ -13,7 +13,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/procesador_tb/rst" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
@@ -590,6 +590,11 @@
    <wvobject fp_name="/procesador_tb/uut/Inst_InstructionMemory/direccion" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">direccion[31:0]</obj_property>
       <obj_property name="ObjectShortName">direccion[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/procesador_tb/uut/Inst_muxPcSource/pcaddressout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcaddressout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcaddressout[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

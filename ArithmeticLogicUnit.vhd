@@ -24,7 +24,7 @@ begin
 							Val1 or not Val2 when (OP = "000110" or OP = "010110") else --orn y orncc
 							Val1 xor Val2 when (OP = "000011" or OP = "010011") else -- xor y xorcc
 							Val1 xor not Val2 when (OP = "000111" or OP = "010111") else -- xorn y xorncc
-							Val1 + Val2 when (OP = "000000" or OP = "010000" or OP="111100" or OP="111101") else -- add o addcc
+							Val1 + Val2 when (OP = "000000" or OP = "010000" or OP="111100" or OP="111101" or OP="111000") else -- add o addcc
 							Val1 + Val2 + ("0000000000000000000000000000000" & Carry) when (OP = "001000" or OP = "011000") else -- addx addxcc
 							Val1 - Val2 when (OP = "000100" or OP = "010100") else -- sub o subcc
 							Val1 - Val2 - ("0000000000000000000000000000000" & Carry) when (OP = "001100" or OP = "011100") else

@@ -190,6 +190,7 @@ COMPONENT PSR
 	PORT(
 		opcode : IN std_logic_vector(1 downto 0);
 		op3 : IN std_logic_vector(5 downto 0);
+		op2 : IN std_logic_vector(2 downto 0);
 		icc : IN std_logic_vector(3 downto 0);
 		cond : IN std_logic_vector(3 downto 0);          
 		salida : OUT std_logic_vector(5 downto 0);
@@ -260,6 +261,7 @@ begin
 		DATATORF => SelectorDataMux,
 		icc =>PSRicc,
 		SelResource => SelectorCURes,
+		op2 => salidaIM(24 downto 22),
 		cond => salidaIM(28 downto 25)
 	);
 	
